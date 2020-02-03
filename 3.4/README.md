@@ -3,7 +3,7 @@
 This app help for employees to submit the responose(employee_id) and save there response with time in a database, admin can login and find the total working hours and leaves for the selected month.
 
 ## Language
-Python, HTML
+Python, HTML5
 
 ## Framework
 Flask
@@ -13,12 +13,44 @@ Flask
 * Create a virtual python environment with virtual\Scripts\activate command in Command Prompt
 
     ```
-    virtual\Scripts\activate
+    $ virtual\Scripts\activate
     ```
+* Install all the python packages listed in recuirements.txt
+
+* Create tables in database with
+
+    ```
+    $ python
+    ```
+
+
+    ```
+    $ from attendance import db
+    ```
+
+
+    ```
+    $ db.create_all()
+    ```
+
+* Add employes, user, role,department info in respective tables
+    
 
 * run the run.py file in the virtual environment created
 
 * open localhost/5000 in your browser
+
+## i18n
+* New Translation can be added with command in comand prompt
+   ```
+    pybabel init -i messages.pot -d translations -l (language initial like hi, en,etc)
+   ```
+
+* Compile the translation
+
+   ```
+    $ pybabel compile -d translations
+   ```
 
 ## Contents
 ### Submit page
