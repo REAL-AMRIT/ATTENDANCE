@@ -3,7 +3,7 @@
 This app help for employees to submit the responose(employee_id) and save there response with time in a database, admin can login and find the total working hours and leaves for the selected month.
 
 ## Language
-Python
+Python, HTML
 
 ## Framework
 Flask
