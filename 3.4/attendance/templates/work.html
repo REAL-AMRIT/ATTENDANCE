@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1>WORK HOURS</h1>
+
+
+
+<form action="{{url_for('works')}}" method="POST">
+  Please Select the Month and Year: <input type="month" name="month" required>
+  <input type="submit">
+</form>
+<div class="output">
+
+{{text|safe}}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>ADMIN LOGIN PAGE</h1>
+
+<div class="email"> {{text | safe}} </div>
+
+<form action="{{url_for('login_post')}}" method="POST">
+  <input title="NAME" placeholder="Enter your ID" type="text" name="id" autofocus required> <br>
+  <input title="PASSWORD" placeholder="Enter your PASSWORD" type="password" name="password" required> <br>
+  
+  <button type="submit"> Submit </button>
+</form>
+{% endblock %}

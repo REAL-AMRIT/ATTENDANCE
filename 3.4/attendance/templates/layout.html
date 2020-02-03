@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title> ATTENDENCE</title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+    <body>
+        <header>
+      <div class="container">
+        <h1 class="logo">Amrit's web app</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('submit') }}">SUBMIT</a></li>
+
+            {% if not current_user.is_authenticated %}
+            <li><a href="{{ url_for('login') }}">ADMIN LOGIN</a></li>
+            {% endif %}
+
+            {% if current_user.is_authenticated %}
+            <li><a href="{{ url_for('admin') }}">ADMIN</a></li>
+            <li><a href="{{ url_for('leaves') }}">LEAVES</a></li>
+            <li><a href="{{ url_for('work') }}">WORKING HOURS</a></li>
+            <li><a href="{{ url_for('logout') }}">LOGOUT</a></li>
+            {% endif %}
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+      <div class="container">
+        {%block content%}
+        {%endblock%}
+      </div>
+    </body>
+</html>

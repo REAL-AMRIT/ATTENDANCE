@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>ADMIN</title>
+  <head>
+    <link href="../static/main.css" rel="stylesheet">
+  </head>
+    <body>
+        <header>
+      <div class="container">
+        <h1 class="logo">Amrit's web app</h1>
+        <strong><nav>
+          <ul class="menu">
+            <li><a href="{{ url_for('leaves') }}">LEAVES</a></li>
+            <li><a href="{{ url_for('work') }}">WORKING HOURS</a></li>
+            <li><a href="{{ url_for('logout') }}">LOGOUT</a></li>
+          </ul>
+        </nav></strong>
+      </div>
+    </header>
+      <div class="container">
+        {%block content%}
+        {%endblock%}
+      </div>
+    </body>
+</html>

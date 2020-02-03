@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<h1>SUBMIT PAGE</h1>
+
+<div class="email"> {{text | safe}} </div>
+
+<form action="{{url_for('success')}}" method="POST">
+  <input title="EMPLOYEE ID" placeholder="Enter your EMPLOYEE ID" type="text" name="employee_id" autofocus> <br>
+  <button type="submit"> Submit </button>
+</form>
+{% endblock %}
